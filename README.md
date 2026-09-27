@@ -44,7 +44,13 @@ Input (32×32×3 RGB image)
 | Dataset | [GTSRB](http://benchmark.ini.rub.de/) |
 
 ---
+## 📦 Dataset
 
+This project uses the [GTSRB (German Traffic Sign Recognition Benchmark)](https://benchmark.ini.rub.de/) 
+dataset — 43 classes, 50,000+ images. Download it from the link above and place it in a `/data` 
+folder in the project root before running `Traffic_signal_model_training.ipynb`. The trained 
+model (`model.h5`) is already included in this repo, so you don't need the dataset just to run 
+`app.py` or `local_app.py`.
 ## 🚀 Run Locally
 
 ```bash
