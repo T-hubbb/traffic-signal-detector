@@ -1,24 +1,37 @@
 # 🚦 Traffic Sign Detection & Classification
 
-A real-time traffic sign detection system built with Python, CNNs, and OpenCV.
+A traffic sign classification system built with Python, CNNs, and OpenCV.
 Trained on the GTSRB dataset (43 classes, 50,000+ images) and deployable both
-locally via webcam and as a web app for image uploads.
+as a desktop app for image uploads and as a web app.
 
 **Test Accuracy: 90%**
 
 ---
 
+
+https://github.com/user-attachments/assets/791fa1ce-b4e9-41b2-b5de-567fc766cb3c
+
+
+
 ## 🎯 What it does
 
-- Classifies 43 types of traffic signs from images or live webcam feed
+- Classifies 43 types of traffic signs from an uploaded image
 - Trained from scratch using a Convolutional Neural Network (CNN)
 - Handles class imbalance via image augmentation
-- Deployable locally (`local_app.py`) or as a server app (`app.py`)
-
+- Desktop GUI (`local_app.py`, built with Tkinter): choose an image file and instantly see the predicted sign class
+- Also deployable as a web app (`app.py`) for browser-based image upload
 ---
 
 ## 🏗️ Architecture
----
+The model is a Convolutional Neural Network trained from scratch (no transfer learning):
+
+Input (32×32×3 RGB image)
+→ Conv2D (32 filters, 3×3) + ReLU → MaxPooling2D
+→ Conv2D (64 filters, 3×3) + ReLU → MaxPooling2D
+→ Dropout (0.25)
+→ Flatten
+→ Dense (256) + ReLU → Dropout (0.5)
+→ Dense (43) + Softmax
 
 ## 🛠️ Tech Stack
 
